@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redSwitch: UISwitch!
+    @IBOutlet weak var greenSwitch: UISwitch!
+    @IBOutlet weak var blueSwitch: UISwitch!
+    @IBOutlet weak var colorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func colorChange(sender: AnyObject) {
+        let r: CGFloat = redSwitch.on ? 1 : 0
+        let g: CGFloat = greenSwitch.on ? 1 : 0
+        let b: CGFloat = blueSwitch.on ? 1 : 0
+        
+        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
     }
-
 
 }
 
