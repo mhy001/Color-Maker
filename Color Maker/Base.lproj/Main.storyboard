@@ -24,7 +24,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iO1-ec-6ly" userLabel="redSwitch">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iO1-ec-6ly" userLabel="redSwitch">
                                 <rect key="frame" x="325" y="65" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -37,7 +37,7 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-8m-e4F" userLabel="greenSwitch">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-8m-e4F" userLabel="greenSwitch">
                                 <rect key="frame" x="325" y="116" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -50,7 +50,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="85R-dZ-wre" userLabel="blueSwitch">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="85R-dZ-wre" userLabel="blueSwitch">
                                 <rect key="frame" x="325" y="167" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -77,29 +77,65 @@
                                     <constraint firstAttribute="width" constant="100" id="sox-kN-5rN"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9YD-Go-k1C" userLabel="redSlider">
+                                <rect key="frame" x="291" y="65" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="5P2-l6-f4m" userLabel="width = 100"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ksA-op-ZAZ"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-OS-1ge" userLabel="greenSlider">
+                                <rect key="frame" x="291" y="116" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="rvB-r6-xQI" userLabel="width = 100"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tlI-o1-el4"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-QS-IMS" userLabel="blueSlider">
+                                <rect key="frame" x="291" y="168" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="OIV-WO-2Ly" userLabel="width = 100"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="aUH-WB-7Fj"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="b0B-QS-IMS" firstAttribute="centerY" secondItem="Pvg-At-pSa" secondAttribute="centerY" id="1yY-r7-jeD"/>
                             <constraint firstItem="jQ5-um-c1h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ar-RD-6jA"/>
                             <constraint firstItem="11r-nA-ZkD" firstAttribute="centerX" secondItem="bTg-r5-mRs" secondAttribute="centerX" id="6IO-ss-jgz"/>
                             <constraint firstItem="85R-dZ-wre" firstAttribute="top" secondItem="0pe-8m-e4F" secondAttribute="bottom" constant="20" id="824-2X-rPn"/>
                             <constraint firstItem="bTg-r5-mRs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="9hk-Lk-qOK"/>
                             <constraint firstItem="bTg-r5-mRs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="AU0-3m-k8D"/>
                             <constraint firstItem="0pe-8m-e4F" firstAttribute="top" secondItem="iO1-ec-6ly" secondAttribute="bottom" constant="20" id="Ae9-wX-hIf"/>
+                            <constraint firstItem="b0B-QS-IMS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="AgB-f8-WDY"/>
                             <constraint firstItem="Pvg-At-pSa" firstAttribute="centerX" secondItem="11r-nA-ZkD" secondAttribute="centerX" id="InN-Dn-ZdE"/>
                             <constraint firstItem="iO1-ec-6ly" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="NcZ-1w-lH1"/>
                             <constraint firstItem="85R-dZ-wre" firstAttribute="centerX" secondItem="0pe-8m-e4F" secondAttribute="centerX" id="PvY-JF-lba"/>
                             <constraint firstItem="11r-nA-ZkD" firstAttribute="top" secondItem="bTg-r5-mRs" secondAttribute="bottom" constant="30" id="QHE-Ub-06b"/>
+                            <constraint firstItem="GS5-OS-1ge" firstAttribute="centerY" secondItem="11r-nA-ZkD" secondAttribute="centerY" id="S8u-ph-h5w"/>
                             <constraint firstItem="jQ5-um-c1h" firstAttribute="top" secondItem="Pvg-At-pSa" secondAttribute="bottom" constant="50" id="Xr6-yz-7Jh"/>
                             <constraint firstItem="Pvg-At-pSa" firstAttribute="top" secondItem="11r-nA-ZkD" secondAttribute="bottom" constant="30" id="hBn-XL-XrA"/>
                             <constraint firstItem="0pe-8m-e4F" firstAttribute="centerX" secondItem="iO1-ec-6ly" secondAttribute="centerX" id="hn8-ld-yuq"/>
+                            <constraint firstItem="GS5-OS-1ge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="iDE-D3-9WL"/>
+                            <constraint firstItem="9YD-Go-k1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="jS8-WZ-LYf"/>
+                            <constraint firstItem="9YD-Go-k1C" firstAttribute="centerY" secondItem="bTg-r5-mRs" secondAttribute="centerY" id="psy-FR-sVa"/>
                             <constraint firstItem="iO1-ec-6ly" firstAttribute="centerY" secondItem="bTg-r5-mRs" secondAttribute="centerY" id="s42-e1-yXG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="b0B-QS-IMS" id="pZr-ha-M2O"/>
                         <outlet property="blueSwitch" destination="85R-dZ-wre" id="2QR-Om-4FD"/>
                         <outlet property="colorView" destination="4CO-fa-LWt" id="4ZM-Ev-Lol"/>
+                        <outlet property="greenSlider" destination="GS5-OS-1ge" id="dWV-dW-WSQ"/>
                         <outlet property="greenSwitch" destination="0pe-8m-e4F" id="EDb-QQ-Jbc"/>
+                        <outlet property="redSlider" destination="9YD-Go-k1C" id="vpl-ED-YFm"/>
                         <outlet property="redSwitch" destination="iO1-ec-6ly" id="Us7-yL-Czc"/>
                     </connections>
                 </viewController>
